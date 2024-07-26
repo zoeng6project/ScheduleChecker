@@ -18,7 +18,7 @@
 
         require './inc/database.php';
         $company_code = $_SESSION['company_code'];
-        $sql = "SELECT * FROM `Order` where company_code = '$company_code' order by ETA; ";
+        $sql = "SELECT * FROM `Order`  order by ETA; ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
