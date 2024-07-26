@@ -10,10 +10,11 @@ require 'database.php';
 $sql = "SELECT user_id, username, company_code  FROM login 
         WHERE username = '$username' AND password = '$password'";
 $result = $conn->query($sql);
-
+echo "before count";
 // store the number of results in a variable
 $count = $result->rowCount();
 
+echo "after count";
 // check if any matches found
 if ($count == 1) {
     $row = $result->fetch();
