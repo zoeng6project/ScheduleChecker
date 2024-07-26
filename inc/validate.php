@@ -1,11 +1,12 @@
 <?php
+session_start();
+
 // store the user inputs in variables and hash the password
 $username = $_POST['username'];
 $password = hash('sha512', $_POST['password']);
 
 // connect to db
 require 'database.php';
-session_start();
 
 // set up and run the query
 $sql = "SELECT user_id, username, company_code  FROM login 
