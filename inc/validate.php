@@ -14,27 +14,29 @@ echo "before count";
 // store the number of results in a variable
 $count = $result->rowCount();
 
-echo "after count";
+echo $count;
 // check if any matches found
 if ($count == 1) {
     $row = $result->fetch();
+	echo $row;
 
     // access the existing session created automatically by the server
     session_start();
     $last_activity = time() ;
-
+echo $last_activity;
     // take the user's id from the database and store it in a session variable
     $_SESSION['user_id'] = $row['user_id'];
     $_SESSION['username'] = $row['username'];
     $_SESSION['company_code'] = $row['company_code'];
     $_SESSION['timeout'] = $last_activity  + 30;
 	$username= $row['username'];
-
+echo $_SESSION['user_id'] ;
     // Set cookie
     setcookie('username', $username, $last_activity  +  30, '/');
 
     // redirect the user
     header('Location: ../view.php');
+echo "end of loop" ;	
 } else {
     echo 'Invalid Login';
 }
