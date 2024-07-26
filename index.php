@@ -33,10 +33,6 @@
                             <input type="date" id="ETA" name="ETA">
                         </div>
 
-                        <div>
-                            <label for="image">Upload Image:</label>
-                            <input type='file' id="file" name='file' />
-                        </div>
 
                         <div style="text-align: center;">
                             <button type="submit" value="Submit">Submit</button>
@@ -60,7 +56,7 @@
 
 
 
-                                if($insert_order  ){
+                                if($insert_order){
                                     echo "  successfully inserted order# $order.";
                                 }
                             
