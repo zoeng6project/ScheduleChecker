@@ -31,6 +31,8 @@ echo $last_activity;
     $_SESSION['timeout'] = $last_activity  + 30;
 	$username= $row['username'];
 echo $_SESSION['user_id'] ;
+	echo $_SESSION['username'] ;
+	echo $username ;
     // Set cookie
     setcookie('username', $username, $last_activity  +  30, '/');
 
