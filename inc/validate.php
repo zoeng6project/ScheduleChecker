@@ -5,6 +5,7 @@ $password = hash('sha512', $_POST['password']);
 
 // connect to db
 require 'database.php';
+session_start();
 
 // set up and run the query
 $sql = "SELECT user_id, username, company_code  FROM login 
@@ -21,7 +22,7 @@ if ($count == 1) {
 	echo $row;
 
     // access the existing session created automatically by the server
-    session_start();
+
     $last_activity = time() ;
 echo $last_activity;
     // take the user's id from the database and store it in a session variable
