@@ -1,6 +1,6 @@
 <?php
 	try{
-		$conn = new PDO('mysql:host=localhost;dbname=TrackingOrder','root','');
+		$conn = new PDO('mysql:host=companyorderchecker-server.mysql.database.azure.com;dbname=trackingorder','fqlyluufix','poi098)(*');
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	}
