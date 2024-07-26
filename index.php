@@ -51,7 +51,7 @@
                     </form>
                     <div style="text-align: center;">
                     <?php
-                        if (!isset($_SESSION['user_id']) || (time() > $_SESSION['timeout'])) {
+                        if ((time() > $_SESSION['timeout'])) {
                             session_unset();     
                             session_destroy();
                             header('location: login.php');
